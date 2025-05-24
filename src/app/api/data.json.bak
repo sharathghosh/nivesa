@@ -1,0 +1,139 @@
+{
+  "comments": [
+    {
+      "id": "comment-1715847813594",
+      "postId": "parag-parikh-flexi-cap-fund",
+      "author": {
+        "name": "Rajiv Kumar",
+        "avatar": "https://randomuser.me/api/portraits/men/42.jpg"
+      },
+      "content": "I've been investing in PPFAS for the past 5 years and can attest to the consistent performance. The international exposure really helps balance the portfolio.",
+      "timestamp": "May 20, 2025",
+      "replies": [
+        {
+          "id": "comment-1715847813594-reply1",
+          "author": {
+            "name": "Sharath Ghosh",
+            "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQGmlXz-2bS_Jw/profile-displayphoto-shrink_200_200/B4EZbDOJGnHkAY-/0/1747031986993?e=2147483647&v=beta&t=1Lf3ZYTFK15BvWWz4nG2Yoj1DxusGMz6y5JSdTMqODU"
+          },
+          "content": "You're absolutely right, Rajiv. The geographic diversification is a key strength of this fund.",
+          "timestamp": "May 21, 2025"
+        }
+      ]
+    },
+    {
+      "id": "comment-1715847813595",
+      "postId": "hdfc-infinia-credit-card-review",
+      "author": {
+        "name": "Meera Patel",
+        "avatar": "https://randomuser.me/api/portraits/women/24.jpg"
+      },
+      "content": "Great review! Is there any way to get an invitation for this card without having a significant banking relationship with HDFC?",
+      "timestamp": "May 22, 2025",
+      "replies": []
+    }
+  ],
+  "posts": [
+    {
+      "id": "parag-parikh-flexi-cap-fund",
+      "title": "Parag Parikh Flexi Cap Fund: A Decade of Stable Performance",
+      "excerpt": "Analysis of Parag Parikh Flexi Cap Fund Direct Plan and its impressive 10-year CAGR performance of approximately 17-18%, significantly outperforming both its benchmark and category average.",
+      "content": "<h2>Introduction</h2><p>The Parag Parikh Flexi Cap Fund (PPFCF) Direct Plan has established itself as one of the most investor-friendly mutual funds in the Indian market. Managed by PPFAS Mutual Fund, this scheme has garnered attention for its unique investment approach and consistent performance over the past decade.</p><p>In this analysis, we'll dive deep into what makes this fund stand out, with a particular focus on its impressive 10-year CAGR performance and how it has maintained stability through various market cycles.</p><h2>Fund Overview</h2><p>Parag Parikh Flexi Cap Fund is an open-ended dynamic equity scheme investing across large cap, mid cap, and small cap stocks. What makes it unique is its ability to also invest in international equities, providing Indian investors with global diversification through a single domestic fund.</p><h3>Key Facts</h3><ul><li>Category: Flexi Cap Fund</li><li>Fund House: PPFAS Mutual Fund</li><li>Launch Date: May 24, 2013</li><li>AUM (Assets Under Management): Over ₹55,000 crores</li><li>Expense Ratio (Direct Plan): Approximately 0.8%</li><li>Benchmark: Nifty 500 TRI</li></ul>",
+      "category": "Investments",
+      "date": "May 23, 2025",
+      "readTime": "9 min read",
+      "image": "/images/parag-parikh-fund.jpg",
+      "thumbnail": "/images/thumbnails/parag-parikh-fund-thumb.jpg",
+      "featured": true,
+      "author": {
+        "name": "Sharath Ghosh",
+        "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQGmlXz-2bS_Jw/profile-displayphoto-shrink_200_200/B4EZbDOJGnHkAY-/0/1747031986993?e=2147483647&v=beta&t=1Lf3ZYTFK15BvWWz4nG2Yoj1DxusGMz6y5JSdTMqODU"
+      }
+    },
+    {
+      "id": "hdfc-infinia-credit-card-review",
+      "title": "HDFC Infinia Credit Card Review: The Ultimate Premium Card",
+      "excerpt": "A comprehensive review of HDFC Bank's most prestigious Infinia Credit Card, its exceptional benefits, and how its annual fee can be easily recovered through rewards and perks.",
+      "content": "<h2>Introduction to HDFC Infinia</h2><p>The HDFC Infinia Credit Card represents the pinnacle of premium credit cards in India. Reserved for high-net-worth individuals, this invitation-only card offers unparalleled benefits that justify its exclusivity.</p>",
+      "category": "Reward Programs",
+      "date": "May 23, 2025",
+      "readTime": "10 min read",
+      "image": "/images/credit-card-rewards.jpg",
+      "thumbnail": "/images/thumbnails/credit-card-rewards-thumb.jpg",
+      "featured": true,
+      "author": {
+        "name": "Sharath Ghosh",
+        "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQGmlXz-2bS_Jw/profile-displayphoto-shrink_200_200/B4EZbDOJGnHkAY-/0/1747031986993?e=2147483647&v=beta&t=1Lf3ZYTFK15BvWWz4nG2Yoj1DxusGMz6y5JSdTMqODU"
+      }
+    },
+    {
+      "id": "interactive-brokers-review",
+      "title": "Interactive Brokers: The Best Broker for NRIs",
+      "excerpt": "Interactive Brokers offers unbeatable fees, a wide range of investment instruments, and excellent security, making it the top choice for NRIs worldwide.",
+      "content": "<h2>Why Interactive Brokers?</h2><p>For Non-Resident Indians (NRIs) looking to invest globally, finding the right brokerage platform is crucial. Interactive Brokers (IBKR) stands out as a top choice due to its global reach, competitive fees, and robust security features.</p>",
+      "category": "Tools",
+      "date": "May 23, 2025",
+      "readTime": "12 min read",
+      "image": "/images/tools/interactive-brokers-featured.jpg",
+      "thumbnail": "/images/thumbnails/interactive-brokers-thumb.jpg",
+      "featured": true,
+      "author": {
+        "name": "Sharath Ghosh",
+        "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQGmlXz-2bS_Jw/profile-displayphoto-shrink_200_200/B4EZbDOJGnHkAY-/0/1747031986993?e=2147483647&v=beta&t=1Lf3ZYTFK15BvWWz4nG2Yoj1DxusGMz6y5JSdTMqODU"
+      }
+    },
+    {
+      "id": "hdfc-ergo-optima-super-secure",
+      "title": "HDFC Ergo Optima Super Secure: Best Health Insurance for Indians",
+      "excerpt": "An in-depth look at why HDFC Ergo Optima Super Secure is the top health insurance choice for residents and NRIs.",
+      "content": "<h2>Health Insurance for Indians</h2><p>Health insurance is a critical component of financial planning, especially for Indians who may face high healthcare costs. The HDFC Ergo Optima Super Secure plan offers comprehensive coverage at competitive rates.</p>",
+      "category": "Tools",
+      "date": "May 20, 2025",
+      "readTime": "8 min read",
+      "image": "/images/hdfc-ergo-health.jpg",
+      "thumbnail": "/images/thumbnails/hdfc-ergo-health-thumb.jpg",
+      "featured": false,
+      "author": {
+        "name": "Sharath Ghosh",
+        "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQGmlXz-2bS_Jw/profile-displayphoto-shrink_200_200/B4EZbDOJGnHkAY-/0/1747031986993?e=2147483647&v=beta&t=1Lf3ZYTFK15BvWWz4nG2Yoj1DxusGMz6y5JSdTMqODU"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "postId": "parag-parikh-flexi-cap-fund",
+      "comments": [
+        {
+          "id": "1",
+          "author": {
+            "name": "Rajiv Kumar",
+            "avatar": "https://randomuser.me/api/portraits/men/42.jpg"
+          },
+          "content": "Great article! This is exactly what I was looking for.",
+          "timestamp": "May 23, 2025",
+          "replies": [
+            {
+              "id": "1-1",
+              "author": {
+                "name": "Sharath Ghosh",
+                "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQGmlXz-2bS_Jw/profile-displayphoto-shrink_200_200/B4EZbDOJGnHkAY-/0/1747031986993?e=2147483647&v=beta&t=1Lf3ZYTFK15BvWWz4nG2Yoj1DxusGMz6y5JSdTMqODU"
+              },
+              "content": "Thank you so much! Glad you found it helpful.",
+              "timestamp": "May 23, 2025"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "author": {
+            "name": "Meera Patel",
+            "avatar": "https://randomuser.me/api/portraits/women/24.jpg"
+          },
+          "content": "Can you please explain more about the tax implications for NRIs?",
+          "timestamp": "May 22, 2025",
+          "replies": []
+        }
+      ]
+    }
+  ]
+}

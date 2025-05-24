@@ -1,0 +1,107 @@
+import { NextRequest, NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '../auth/[...nextauth]/route';
+
+// Path to our JSON database
+const dataPath = path.join(process.cwd(), 'src/app/api/data.json');
+
+// Read data
+function getData() {
+  const jsonData = fs.readFileSync(dataPath, 'utf8');
+  return JSON.parse(jsonData);
+}
+
+// Write data
+function writeData(data) {
+  fs.writeFileSync(dataPath, JSON.stringify(data, null, 2), 'utf8');
+}
+
+// GET comments for a specific post
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const postId = searchParams.get('postId');
+    
+    if (!postId) {
+      return NextResponse.json({ error: 'Post ID is required' }, { status: 400 });
+    }
+    
+    const data = getData();
+    
+    // Initialize comments if they don't exist
+    if (!data.comments) {
+      data.comments = [];
+    }
+    
+    // Filter comments by postId
+    const postComments = data.comments.filter(comment => comment.postId === postId);
+    
+    return NextResponse.json({ comments: postComments || [] });
+  } catch (error) {
+    console.error('Error fetching comments:', error);
+    return NextResponse.json({ error: 'Failed to fetch comments' }, { status: 500 });
+  }
+}
+
+// DELETE a comment (admin only)
+export async function DELETE(request: NextRequest) {
+  try {
+    const session = await getServerSession(authOptions);
+    
+    // Check if user is authenticated as admin
+    if (!session) {
+      return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
+    }
+    
+    const { searchParams } = new URL(request.url);
+    const postId = searchParams.get('postId');
+    const commentId = searchParams.get('commentId');
+    const replyId = searchParams.get('replyId');
+    
+    if (!postId || !commentId) {
+      return NextResponse.json({ error: 'Post ID and Comment ID are required' }, { status: 400 });
+    }
+    
+    const data = getData();
+    const postCommentsIndex = data.comments.findIndex(c => c.postId === postId);
+    
+    if (postCommentsIndex === -1) {
+      return NextResponse.json({ error: 'Comments not found for this post' }, { status: 404 });
+    }
+    
+    if (replyId) {
+      // Delete a reply
+      const commentIndex = data.comments[postCommentsIndex].comments.findIndex(c => c.id === commentId);
+      
+      if (commentIndex === -1) {
+        return NextResponse.json({ error: 'Comment not found' }, { status: 404 });
+      }
+      
+      const replyIndex = data.comments[postCommentsIndex].comments[commentIndex].replies.findIndex(r => r.id === replyId);
+      
+      if (replyIndex === -1) {
+        return NextResponse.json({ error: 'Reply not found' }, { status: 404 });
+      }
+      
+      data.comments[postCommentsIndex].comments[commentIndex].replies.splice(replyIndex, 1);
+    } else {
+      // Delete a comment
+      const commentIndex = data.comments[postCommentsIndex].comments.findIndex(c => c.id === commentId);
+      
+      if (commentIndex === -1) {
+        return NextResponse.json({ error: 'Comment not found' }, { status: 404 });
+      }
+      
+      data.comments[postCommentsIndex].comments.splice(commentIndex, 1);
+    }
+    
+    writeData(data);
+    
+    return NextResponse.json({ message: replyId ? 'Reply deleted successfully' : 'Comment deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting comment:', error);
+    return NextResponse.json({ error: 'Failed to delete comment' }, { status: 500 });
+  }
+}

@@ -1,0 +1,132 @@
+// filepath: /Usersexport const metadata: Metadata = {
+  title: "नiveśा - Investment Advice for Indians & NRIs",
+  description: "Expert advice on investments and reward programs for Indians and NRIs across the world",
+  keywords: ["investment advice", "investments", "reward programs", "NRI investments", "Indian investors"],
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    apple: '/favicon-32x32.png',
+  },
+  manifest: '/manifest.json',
+  themeColor: '#1E40AF',
+};ownloads/site/nivesa/src/app/layout.tsx
+import type { Metadata } from "next";
+import { Inter, Lora } from "next/font/google";
+import "./globals.css";
+import MobileNav from "@/components/MobileNav";
+import NivesaLogo from "@/components/NivesaLogo";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const lora = Lora({
+  variable: "--font-lora",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "नiveśа - Investment Advice for Indians & NRIs",
+  description: "Expert advice on investments and reward programs for Indians and NRIs across the world",
+  keywords: ["investment advice", "investments", "reward programs", "NRI investments", "Indian investors"],
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    apple: '/favicon-32x32.png',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${inter.variable} ${lora.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon-32x32.png" />
+      </head>
+      <body
+        className="antialiased bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+      >
+        <div className="flex flex-col min-h-screen">
+          <header className="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center">
+                  <a href="/" className="flex items-center">
+                    <NivesaLogo className="text-blue-800 dark:text-blue-400" />
+                  </a>
+                </div>
+                <nav className="hidden md:flex space-x-8">
+                  <a href="/investments" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400">Investments</a>
+                  <a href="/reward-programs" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400">Reward Programs</a>
+                  <a href="/tools" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400">Tools</a>
+                  <a href="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400">About</a>
+                  <a href="/blog" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400">Blog</a>
+                </nav>
+                <MobileNav />
+              </div>
+            </div>
+          </header>
+
+          <main className="flex-grow">{children}</main>
+
+          <footer className="bg-white dark:bg-gray-800 mt-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Categories</h3>
+                  <ul className="mt-4 space-y-2">
+                    <li><a href="/investments" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Investments</a></li>
+                    <li><a href="/reward-programs" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Reward Programs</a></li>
+                    <li><a href="/loyalty-programs" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Loyalty Programs</a></li>
+                    <li><a href="/tools" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Tools</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Company</h3>
+                  <ul className="mt-4 space-y-2">
+                    <li><a href="/about" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">About</a></li>
+                    <li><a href="/blog" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Blog</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Legal</h3>
+                  <ul className="mt-4 space-y-2">
+                    <li><a href="/disclaimer" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Disclaimer</a></li>
+                    <li><a href="/privacy-policy" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Privacy Policy</a></li>
+                    <li><a href="/terms" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Terms of Use</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Connect</h3>
+                  <ul className="mt-4 space-y-2">
+                    <li><a href="#" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Twitter</a></li>
+                    <li><a href="#" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">LinkedIn</a></li>
+                    <li><a href="#" className="text-base text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Email</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-12 border-t border-gray-200 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p className="text-base text-gray-500 dark:text-gray-400">© 2025 <NivesaLogo size="text-base" className="text-gray-500 dark:text-gray-400 inline-block" />. All rights reserved.</p>
+                <p className="mt-4 md:mt-0 text-sm text-gray-500 dark:text-gray-400">
+                  Designed and developed for Indian investors worldwide.
+                </p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </body>
+    </html>
+  );
+}
